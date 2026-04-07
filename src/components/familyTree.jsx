@@ -11,6 +11,7 @@ import "reactflow/dist/style.css";
 import { familyNodes, rootId } from "../data/familytree";
 import { buildTreeLayout } from "../utils/treelayout";
 import FamilyEdge from "./familyEdge";
+import defaultProfile from "../assets/profilePicture.png";
 
 // add alongside nodeTypes
 const edgeTypes = {
@@ -61,7 +62,7 @@ const generationColors = [
 // }
 function ConditionalLabel({ name, color, hovered, depth }) {
   const size = getNodeSize(depth);
-  const fontSize = Math.max(size * 0.22, 9);
+  const fontSize = Math.max(size *0.22, 9);
   const paddingH = Math.max(size * 0.18, 5);
 
   return (
@@ -137,36 +138,19 @@ function PersonNode({ data }) {
           height: size,
           borderRadius: "50%",
           overflow: "hidden",
-          border: `2.5px solid ${hovered ? color.ring : "var(--color-border-secondary)"}`,
-          background: "var(--color-background-secondary)",
+          border: `${depth <= 1 ? 2.5 : 1.5}px solid ${hovered ? color.ring : "#ffffff20"}`,
+          background: "#1a1d2e",
           transition: "border-color 0.2s ease",
           position: "relative",
           zIndex: 1,
+          flexShrink: 0,
         }}
       >
-        {data.imageUrl ? (
-          <img
-            src={data.imageUrl}
-            alt={data.name}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        ) : (
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 600,
-              fontSize: 15,
-              color: color.text,
-              background: color.glow,
-            }}
-          >
-            {data.name.slice(0, 1)}
-          </div>
-        )}
+        <img
+          src={data.imageUrl || defaultProfile}
+          alt={data.name}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
       </div>
 
       <ConditionalLabel name={data.name} color={color} hovered={hovered} />

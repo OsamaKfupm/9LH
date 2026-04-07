@@ -9,7 +9,7 @@ export const familyNodes = {
   // ── Generation 2 ──────────────────────────────────────────
   "2":  { id: "2",  name: "خالد إبراهيم",   imageUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80", childrenIds: ["20", "21", "22", "23"] },
   "3":  { id: "3",  name: "سعيد إبراهيم",   imageUrl: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=300&q=80", childrenIds: ["24", "25", "26"] },
-  "4":  { id: "4",  name: "ناصر إبراهيم",   imageUrl: "https://images.unsplash.com/photo-1506795660185-287aa1e5a2df?auto=format&fit=crop&w=300&q=80", childrenIds: ["27", "28", "29", "30"] },
+  "4":  { id: "4",  name: "ناصر إبراهيم",   imageUrl: "", childrenIds: ["27", "28", "29", "30"] },
   "5":  { id: "5",  name: "طارق إبراهيم",   imageUrl: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=300&q=80", childrenIds: ["31", "32", "33"] },
   "6":  { id: "6",  name: "فهد إبراهيم",    imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80", childrenIds: ["34", "35", "36", "37"] },
 
