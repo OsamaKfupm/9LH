@@ -166,7 +166,7 @@ export default function FamilyTree() {
   const layout = useMemo(() => buildTreeLayout(familyNodes, rootId), []);
 
   return (
-    <div style={{ width: "100%", height: "100%", background: "#0f1117" }}>
+    <div style={{ width: "100%", height: "100%", background: "#fff" }}>
       <ReactFlow
         nodes={layout.nodes}
         edges={layout.edges}
